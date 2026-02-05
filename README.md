@@ -1,10 +1,10 @@
 # API Node.js Dockerisée - TP Rattrapage
 
-**LINDOU NGAPOUT ABDEL RAOUFOU **
+LINDOU NGAPOUT ABDEL RAOUFOU
 
 Projet d'API REST avec Node.js, MongoDB et InfluxDB, le tout dans des conteneurs Docker.
 
----
+
 
 ## Ce que contient le projet
 
@@ -20,8 +20,8 @@ Projet d'API REST avec Node.js, MongoDB et InfluxDB, le tout dans des conteneurs
 
 ```
 TP-ratrapage-/
-├── docker-compose.yml     --> Config des conteneurs
-├── Dockerfile             --> Image de l'API
+    docker-compose.yml     --> Config des conteneurs
+    Dockerfile             --> Image de l'API
 ├── package.json
 ├── tsconfig.json
 ├── README.md
@@ -71,21 +71,21 @@ TP-ratrapage-/
 
 ---
 
-## Pourquoi ces choix techniques ?
+ourquoi ces choix techniques ?
 
-### Mongoose pour MongoDB
+ Mongoose pour MongoDB
 
 J'ai choisi Mongoose comme ORM parce que c'est le plus utilisé avec Node.js et MongoDB. Il permet de définir des schémas, faire de la validation, et c'est bien documenté. C'était plus simple que d'utiliser le driver natif MongoDB.
 
-### Zod pour la validation
+ Zod pour la validation
 
 Zod permet de valider les données entrantes (body, params, query) et en plus il génère automatiquement les types TypeScript. Du coup on a la validation ET le typage au même endroit.
 
-### InfluxDB pour les métriques
+ InfluxDB pour les métriques
 
 InfluxDB est fait pour les données temporelles (time-series). Je l'utilise pour stocker les stats des requêtes API : temps de réponse, nombre de requêtes, etc. C'est plus adapté que MongoDB pour ce type de données.
 
-### Architecture en couches
+Architecture en couches
 
 J'ai séparé le code en plusieurs couches pour que ce soit plus clair :
 
