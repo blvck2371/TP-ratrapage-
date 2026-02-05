@@ -80,7 +80,7 @@ services:
 networks:
   api-network:
     driver: bridge
-
+# volumes pour persister les données dans le cas ou on arrête le conteneur et que on veut les garder
 volumes:
   mongodb_data:
-  influxdb_data:
+  influxdb_data: 
