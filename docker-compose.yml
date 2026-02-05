@@ -52,7 +52,7 @@ services:
       retries: 5
       start_period: 30s
 
-  # Base de données InfluxDB (pour les métriques)
+  # Base de données InfluxDB (pour les métriques voila un peu de config pour influxdb )
   influxdb:
     image: influxdb:2.7
     container_name: influxdb
