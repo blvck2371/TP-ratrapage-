@@ -1,6 +1,7 @@
-# Dockerfile pour l'API Node.js
+# Dockerfile pour l'API
+# on utilise node alpine parce que c'est plus leger
 
-# Build
+# etape 1: build du typescript
 FROM node:20-alpine AS builder
 WORKDIR /app
 COPY package*.json ./
@@ -8,7 +9,7 @@ RUN npm ci
 COPY . .
 RUN npm run build
 
-# Production
+# etape 2: image de prod (sans les devDependencies)
 FROM node:20-alpine
 WORKDIR /app
 COPY package*.json ./
