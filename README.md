@@ -1,6 +1,6 @@
 # API Node.js Dockerisée - TP Rattrapage
 
-**LINDOU NGAPOUT**
+**LINDOU NGAPOUT ABDEL RAOUFOU **
 
 Projet d'API REST avec Node.js, MongoDB et InfluxDB, le tout dans des conteneurs Docker.
 
