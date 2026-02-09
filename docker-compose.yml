@@ -1,8 +1,6 @@
 # Docker Compose pour l'API
 # 3 services : api, mongodb, influxdb
 
-version: '3.8'
-
 services:
   # Backend Node.js api  de l'application node.js 
   api:
@@ -35,7 +33,7 @@ services:
     container_name: mongodb
     restart: unless-stopped
     ports:
-      - "27017:27017"
+      - "27019:27017"
     environment:
       - MONGO_INITDB_ROOT_USERNAME=admin
       - MONGO_INITDB_ROOT_PASSWORD=password123
